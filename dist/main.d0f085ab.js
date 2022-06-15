@@ -163,6 +163,14 @@ dom.each(dom.children(t), function (n) {
 });
 
 console.log(dom.index(s2));
+
+var div2 = dom.find('#test2>.red')[0]; // 获取对应的元素
+dom.style(div2, 'color', 'red'); // 设置 div.style.color
+
+var divList = dom.find('.red'); // 获取多个 div.red 元素
+dom.each(divList, function (n) {
+    return console.log(n);
+}); // 遍历 divList 里的所有元素
 },{}],"C:\\Users\\hmx\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -192,7 +200,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '1757' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '1429' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
